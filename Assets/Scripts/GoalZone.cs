@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoalZone : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class GoalZone : MonoBehaviour
             return;
         }
 
-        other.GetComponent<Rigidbody>().AddForce(launchForce);
-        print("YOU WIN!!!");
+        SceneManager.LoadSceneAsync(2);
+
+        //other.GetComponent<Rigidbody>().AddForce(launchForce);
+        //print("YOU WIN!!!");
     }
 }

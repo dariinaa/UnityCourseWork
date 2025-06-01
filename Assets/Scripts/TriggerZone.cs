@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriggerZone : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class TriggerZone : MonoBehaviour
             return;
         }
 
-        RollerBall player = other.gameObject.GetComponent<RollerBall>();
-        other.transform.position = player.RespawnPoint.position;
+        SceneManager.LoadSceneAsync(3);
+
+        //RollerBall player = other.gameObject.GetComponent<RollerBall>();
+        //other.transform.position = player.RespawnPoint.position;
     }
 }
